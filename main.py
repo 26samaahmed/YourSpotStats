@@ -14,7 +14,7 @@ SPOTIFY_REDIRECT_URI=os.getenv("SPOTIFY_REDIRECT_URI")
 
 spotify = spotipy.Spotify(auth_manager=SpotifyOAuth(client_id=SPOTIFY_CLIENT_ID, client_secret=SPOTIFY_CLIENT_SECRET, redirect_uri=SPOTIFY_REDIRECT_URI, scope=scope))
 
-print("\n*  ੈ✩‧₊˚*  ੈ✩‧₊˚*  ੈ✩ Welcome to YourSpotStats ‧₊˚*  ੈ✩‧₊˚*  ੈ✩‧₊˚*\n")
+print("\n*  ੈ✩‧₊˚*  ੈ✩‧₊˚*  ੈ✩ ‧₊˚*  ੈ✩‧₊˚*  ੈ✩‧₊˚* Welcome to YourSpotStats *  ੈ✩‧₊˚*  ੈ✩‧₊˚*  ੈ✩ ‧₊˚*  ੈ✩‧₊˚*  ੈ✩‧₊˚*\n")
 
 # Top Tracks this month
 range = "short_term"
@@ -34,44 +34,58 @@ def getTopTracks():
     total_sec = m_sec / 1000
     min = int(total_sec // 60)
     sec = int(total_sec % 60)
-    
-    #TODO: If i have a number like 4, make it 04 so it looks like 3:04 instead of 3:4
+
+    # Prints 04 instead of 4
+    if sec < 10:
+      sec = "0" + str(sec)
     
     artistName.append(track['artists'][0]['name'])
-    duration.append(str())
-    #print('|', 'Duration', min, ':', sec)
-    #TODO:store the duation of each song to be displayed
-    
+    duration.append(str(min) + ":" + str(sec))
     trackNames.append(track['name'])
     tempos.append(spotify.audio_features(track['uri'])[0]['tempo'])
     valences.append(spotify.audio_features(track['uri'])[0]['valence'])
 
+
+
   # Create Data Frame
+
   data = pd.DataFrame( {
     "Track": trackNames,
     "Artist": artistName,
     "Tempo": tempos,
-    "Valences": valences
+    "Valences": valences,
+    "Duration": duration
   })
+  return data
 
-  #data.style.set_properties(**{'border': '1.3px solid white', 'color': 'blue'})
-  #data.style.set_properties(subset=['trackNames'], **{'width': '100px'})
-  print(",.-~*´¨¯¨`*·~-.¸- Your Top 10 Songs This Month -,.-~*´¨¯¨`*·~-.¸\n\n")
-  print(data)
+#data.style.set_properties(**{'border': '1.3px solid white', 'color': 'blue'})
+#data.style.set_properties(subset=['trackNames'], **{'width': '100px'})
+print("\n\n=============================== Your Top 10 Songs This Month ===============================\n\n")
+topTracks = getTopTracks()
+print(topTracks)
+
+
 
 # User's Top 10 Songs
 def getTopArtists():
   artistList = []
+  artistGenre = []
   topArtists = spotify.current_user_top_artists(time_range=range,limit=10)
   for artist in topArtists['items']:
     artistList.append(artist['name'])
+    artistGenre.append(artist['genres'])
 
   data2 = pd.DataFrame( {
-    "Artist": artistList
+    "Artist": artistList,
+    "Genre": artistGenre
   })
 
-  print(",.-~*´¨¯¨`*·~-.¸- Your Top 10 Artists This Month -,.-~*´¨¯¨`*·~-.¸\n\n")
-  print(data2)
+  return data2
+
+
+print("\n\n=============================== Your Top 10 Artists This Month ===============================\n\n")
+topArtists = getTopArtists()
+print(topArtists)
 
 '''
 print('\n\n')
