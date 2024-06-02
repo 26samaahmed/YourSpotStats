@@ -14,7 +14,9 @@ different graphs so I was able to test multiple to see which best represents the
 
 <img width="771" alt="Screenshot 2024-05-30 at 7 40 47 PM" src="https://github.com/26samaahmed/userSpotStats/assets/111910374/183547dd-44f9-44f7-8fb6-3bb8acb6f6e2"><br>
 
-<img width="771" alt="Screenshot 2024-06-01 at 3 33 11 PM" src="https://github.com/26samaahmed/userSpotStats/assets/111910374/02f72c42-c440-4573-801c-949047fa03f6">
+<img width="771" alt="Screenshot 2024-06-02 at 1 09 32 PM" src="https://github.com/26samaahmed/YourSpotStats/assets/111910374/24a12811-b0f5-4536-b5a2-7df7cbcad9db">
+
+<img width="771" alt="Screenshot 2024-06-02 at 1 10 00 PM" src="https://github.com/26samaahmed/YourSpotStats/assets/111910374/2bf14f60-e331-4d8f-93b6-d65e666cd928">
 
 
 made with 💚 by sama ahmed
