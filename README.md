@@ -12,4 +12,9 @@ I wanted to get more familar with using Spotify's API and the Spotipy Library. I
 I learned about plotext for the first time and I found it very nice to have graphs be displayed on the command line. I was also not very familar about
 different graphs so I was able to test multiple to see which best represents the data I have.
 
+<img width="771" alt="Screenshot 2024-05-30 at 7 40 47 PM" src="https://github.com/26samaahmed/userSpotStats/assets/111910374/183547dd-44f9-44f7-8fb6-3bb8acb6f6e2"><br>
+
+<img width="771" alt="Screenshot 2024-06-01 at 3 33 11 PM" src="https://github.com/26samaahmed/userSpotStats/assets/111910374/02f72c42-c440-4573-801c-949047fa03f6">
+
+
 made with 💚 by sama ahmed
