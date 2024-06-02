@@ -16,7 +16,7 @@ spotify = spotipy.Spotify(auth_manager=SpotifyOAuth(client_id=SPOTIFY_CLIENT_ID,
 
 print("\n*  ੈ✩‧₊˚*  ੈ✩‧₊˚*  ੈ✩ ‧₊˚*  ੈ✩‧₊˚*  ੈ✩‧₊˚* Welcome to YourSpotStats *  ੈ✩‧₊˚*  ੈ✩‧₊˚*  ੈ✩ ‧₊˚*  ੈ✩‧₊˚*  ੈ✩‧₊˚*\n")
 
-# Top Tracks this month
+
 range = "short_term"
 tempos = []
 trackNames = []
@@ -24,6 +24,7 @@ valences = []
 artistName = []
 duration = []
 
+# Top Tracks this month
 def getTopTracks():
   topTracks = spotify.current_user_top_tracks(time_range=range, limit=10)
 
@@ -46,24 +47,17 @@ def getTopTracks():
     valences.append(spotify.audio_features(track['uri'])[0]['valence'])
 
 
-
   # Create Data Frame
-
   data = pd.DataFrame( {
     "Track": trackNames,
     "Artist": artistName,
-    "Tempo": tempos,
-    "Valences": valences,
     "Duration": duration
   })
   return data
 
-#data.style.set_properties(**{'border': '1.3px solid white', 'color': 'blue'})
-#data.style.set_properties(subset=['trackNames'], **{'width': '100px'})
-print("\n\n=============================== Your Top 10 Songs This Month ===============================\n\n")
+print("\n=============================== Your Top 10 Songs This Month ===============================\n\n")
 topTracks = getTopTracks()
 print(topTracks)
-
 
 
 # User's Top 10 Songs
@@ -82,19 +76,14 @@ def getTopArtists():
 
   return data2
 
-
-print("\n\n=============================== Your Top 10 Artists This Month ===============================\n\n")
+print("\n=============================== Your Top 10 Artists This Month ===============================\n\n")
 topArtists = getTopArtists()
 print(topArtists)
 
-'''
-print('\n\n')
-plotext.bar(trackNames, tempos, orientation="horizontal")
-plotext.title('Tempo Visualization (Bar Chart)')
+print('\n')
+plotext.simple_bar(trackNames, tempos, width=100, color='green' ,title='Tempo Visualization')
 plotext.show()
 
-print('\n\n')
-plotext.hist(valences)
-plotext.title('Valence Visualization (Histogram)')
+print('\n')
+plotext.simple_bar(trackNames, valences, width=100, color='green', title='Valence Visualization')
 plotext.show()
-'''
