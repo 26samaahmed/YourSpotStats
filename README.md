@@ -29,17 +29,17 @@ To use this project, you'll need to obtain your own Spotify API credentials.
      ```
 
 ## Guide:
-1. Clone the repository<br><br>
+1. **Clone the repository**:
 ```sh
 git clone https://github.com/26samaahmed/YourSpotStats
 ```
 
-2. Navigate to Repository <br><br>
+2. **Navigate to Repository**:
 ```sh
 cd YourSpotStats
 ```
 
-4. Create a virual environment<br><br>
+4. **Create a virual environment**:
  ```sh
  command on windows
  ```
@@ -47,31 +47,32 @@ cd YourSpotStats
  ```sh
  command on macos
  ```
-6. Activate the virtual environment<br><br>
+6. **Activate the virtual environment**:
 - Windows
- ```sh
- venv\Scripts\activate
- ```
-   
+```sh
+venv\Scripts\activate
+```
 - Mac
  ```sh
  source venv/bin/activate
  ```
 
-8. Install Dependencies<br><br>
+8. **Install Dependencies**:
  ```sh
 pip install -r requirements.txt
 ```
 
-10. Run Project<br><br>
-- Windows
+10. **Run Project**:
+   - Windows
 ```sh
 py -3 main.py
 ```
 - Mac
 ```sh
 python3 main.py
-``` 
+```
+11. **Authorizing User**:
+#### When you run the project, you will be prompted to authorize the app with Spotify. Follow the on-screen instructions to log in and authorize the app to access your Spotify data. Once you authorize your account, the data will be shown as below. 
 
 <img width="771" alt="Screenshot 2024-05-30 at 7 40 47 PM" src="https://github.com/26samaahmed/userSpotStats/assets/111910374/183547dd-44f9-44f7-8fb6-3bb8acb6f6e2"><br>
 
