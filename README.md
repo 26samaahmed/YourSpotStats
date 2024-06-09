@@ -3,14 +3,75 @@ The command-line application showcases the user's top 10 songs on Spotify and vi
 
 Tech used: Python, Spotify API, Spotipy Library, Plotext, Pandas
 
-### TODO: explain how to run it locally
+## Requirement
+> specify version of python here
 
-## Purpose:
-I wanted to get more familar with using Spotify's API and the Spotipy Library. I also wanted to see how I can visualize a track's audio features
+To use this project, you'll need to obtain your own Spotify API credentials.
 
-## What I learned:
-I learned about plotext for the first time and I found it very nice to have graphs be displayed on the command line. I was also not very familar about
-different graphs so I was able to test multiple to see which best represents the data I have.
+1. **Create a Spotify Developer Account**:
+   - Go to the [Spotify Developer Dashboard](https://developer.spotify.com/dashboard/applications) and log in with your Spotify account.
+   - If you don't have a Spotify account, create one.
+
+2. **Create a New App**:
+   - Click on the "Create an App" button.
+   - Fill in the required details such as the App name and description.
+   - After submitting, you will get a Client ID and a Client Secret.
+
+3. **Set Up Redirect URI**:
+   - In your app settings, set up a redirect URI, for example: `http://localhost:5000/callback`.
+
+4. **Configure the Project**:
+   - Create a `.env` file in the project root directory and add your credentials:
+     ```dotenv
+     SPOTIFY_CLIENT_ID=your_client_id
+     SPOTIFY_CLIENT_SECRET=your_client_secret
+     SPOTIFY_REDIRECT_URI=http://localhost:8888/callback
+     ```
+
+## Guide:
+1. Clone the repository<br><br>
+```sh
+git clone https://github.com/26samaahmed/YourSpotStats
+```
+
+2. Navigate to Repository <br><br>
+```sh
+cd YourSpotStats
+```
+
+4. Create a virual environment<br><br>
+ ```sh
+ command on windows
+ ```
+ 
+ ```sh
+ command on macos
+ ```
+6. Activate the virtual environment<br><br>
+- Windows
+ ```sh
+ venv\Scripts\activate
+ ```
+   
+- Mac
+ ```sh
+ source venv/bin/activate
+ ```
+
+8. Install Dependencies<br><br>
+ ```sh
+pip install -r requirements.txt
+```
+
+10. Run Project<br><br>
+- Windows
+```sh
+py -3 main.py
+```
+- Mac
+```sh
+python3 main.py
+``` 
 
 <img width="771" alt="Screenshot 2024-05-30 at 7 40 47 PM" src="https://github.com/26samaahmed/userSpotStats/assets/111910374/183547dd-44f9-44f7-8fb6-3bb8acb6f6e2"><br>
 
