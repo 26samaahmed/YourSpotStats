@@ -3,8 +3,8 @@ The command-line application showcases the user's top 10 songs on Spotify and vi
 
 Tech used: Python, Spotify API, Spotipy Library, Plotext, Pandas
 
-## Requirement
-> specify version of python here
+## Requirements
+> Must have python installed
 
 To use this project, you'll need to obtain your own Spotify API credentials.
 
@@ -25,7 +25,7 @@ To use this project, you'll need to obtain your own Spotify API credentials.
      ```dotenv
      SPOTIFY_CLIENT_ID=your_client_id
      SPOTIFY_CLIENT_SECRET=your_client_secret
-     SPOTIFY_REDIRECT_URI=http://localhost:8888/callback
+     SPOTIFY_REDIRECT_URI=http://localhost:5000/callback
      ```
 
 ## Guide:
@@ -41,11 +41,11 @@ cd YourSpotStats
 
 4. **Create a virual environment**:
  ```sh
- command on windows
+python -m venv venv
  ```
  
  ```sh
- command on macos
+python3 -m venv venv
  ```
 6. **Activate the virtual environment**:
 - Windows
